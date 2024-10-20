@@ -16,14 +16,14 @@ int main()
 	int somma = 0;
 	int val;
 	int numeri = 0;
-	while (scanf("%d\n",&val) != EOF) {
+	while (scanf("%d\n",&val) == 1) {
 		somma += val;
 		numeri++;
 	}
 
 	double media;
 	if (numeri > 0) {
-		media = somma/numeri;
+		double media = (double)somma/numeri;
 		printf("La media è %f\n", media);
 	}
 
