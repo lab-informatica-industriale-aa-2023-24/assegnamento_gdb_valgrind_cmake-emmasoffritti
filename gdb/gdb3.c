@@ -1,12 +1,13 @@
 // gdb3.c
 #include<stdio.h>
 
-long fattoriale(int n)
+int fattoriale(int x)
 {
-	long result = 1;
-	while (n--)
-		result*=n;
-
+	int result = 1;
+	while (x>1){
+		x--;
+		result*=x;
+	}
  	return result;
 }
 
@@ -15,9 +16,9 @@ int main()
 {
 	int n = 10;
 
-	long val = fattoriale(n);
+	int val = fattoriale(n);
 
-	printf("Fattoriale di %d, %ld\n", n, val);
+	printf("Fattoriale di %d, %d\n", n, val);
 
 	return 0;
 }
